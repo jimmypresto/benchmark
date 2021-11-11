@@ -24,13 +24,13 @@ fs.readFile('3.json', 'utf-8', (_err, data) => {
     data3 = data;
 });
 
-suite.add('JSON#parse 1.json', function() {
+suite.add('JSON#parse 1.json, 578KB, 5470 fields, monomorphic', function() {
     var json = JSON.parse(data1);
 })
-.add('JSON#parse 2.json', function() {
+.add('JSON#parse 2.json, 932KB, 8800 fields, monomorphic', function() {
     var json = JSON.parse(data2);
 })
-.add('JSON#parse 3.json', function() {
+.add('JSON#parse 3.json, 1297KB, 12190 fields, monomorphic', function() {
     var json = JSON.parse(data3);
 })
 .add('JSON#parse rotated blobs of same size like 1.json', function() {
